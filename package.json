@@ -1,0 +1,40 @@
+{
+  "name": "lachesis",
+  "version": "0.1.0",
+  "description": "Timer Queue Service",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node ./scripts/start",
+    "dev": "NODE_ENV=development nodemon ./scripts/start",
+    "db:wipe": "NODE_ENV=development node ./scripts/wipe",
+    "test": "jest"
+  },
+  "author": "David Robinson <dr@monetise.io> (http://www.monetise.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abrisene/lachesis/issues"
+  },
+  "homepage": "https://github.com/abrisene/lachesis#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abrisene/lachesis"
+  },
+  "devDependencies": {
+    "eslint": "5.5.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "body-parser": "1.18.3",
+    "chalk": "2.4.1",
+    "dotenv": "6.2.0",
+    "express": "4.16.4",
+    "ip": "1.1.5",
+    "mongodb": "3.1.10",
+    "mongoose": "5.3.15",
+    "nodemon": "1.18.8",
+    "pug": "2.0.3",
+    "redis": "2.8.0"
+  }
+}
