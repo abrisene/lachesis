@@ -1,6 +1,6 @@
 {
   "name": "lachesis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Timer Queue Service",
   "main": "./lib/index.js",
   "scripts": {
