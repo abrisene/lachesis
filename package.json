@@ -2,6 +2,10 @@
   "name": "lachesis",
   "version": "0.1.2",
   "description": "Timer Queue Service",
+  "keywords": [
+    "timer",
+    "timer queue"
+  ],
   "main": "./lib/index.js",
   "scripts": {
     "start": "NODE_ENV=production node ./scripts/start",
