@@ -55,23 +55,6 @@ PROD_MONGODB      // A URL to a mongoDB database. This value is populated by Her
 ### Create
 
 To **CREATE** send a **POST** request to the `/timer` route.
-
-Supported Parameters:
-```
-{
-  startTS          // The timestamp that the timer should begin at. Will default to Date.now()
-  endTS           // The timestamp that the timer should expire at. This is required if duration is not set.
-  duration        // The duration of the timer. Setting this will automatically set the endTS based off of the startTS + duration.
-  durationType    // The time unit of the duration - seconds 's', or milliseconds 'ms'. Defaults to 's' (seconds).
-  payload         // An object containing data to be returned when the timer expires.
-  callback        // The callback URL. The payload will be sent back with a POST request when the timer expires.
-}
-
-```
-
-### Create
-
-To **CREATE** send a **POST** request to the `/timer` route.
 This will return the created timer with it's id.
 
 Supported Parameters:
