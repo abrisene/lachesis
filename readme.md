@@ -4,24 +4,47 @@ Lachesis is a simple timer queue server using NodeJS and MongoDB for persistence
 
 ### Usage
 
+Lachesis can be cloned and used as a standalone server, or used as a module.
+
 * Requests can be sent to Lachesis to create / read / update / delete timers through a REST API.
 * Timers are evaluated locally in a queue on the server and stored for persistence in MongoDB.
 * On expiration, a timer will send a callback containing a data payload to a URL indicated in it's creation.
 
-### Limitations and Future Improvements
+## Limitations and Future Improvements
 
-* Currently timers only fire their callback once, which can cause issues if the reciever is not online. The timer model already contains fields to track metrics on redemption attempts. Future versions will address this issue.
-* Only CORS is used for authentication. Lachesis assumes that any valid traffic is trusted. Authentication should be performed on another layer.
-* No current filtering capability. All timers are treated equally by the queue.
+* Timers currently fire their callback once and are removed. The next version will evaluate whether or not the callback was recieved and retry timers that were not recieved.
+* As of the current version CORS is the only provided method of authentication. More robust security can be achieved currently by using the TimerController from the Lachesis module and writing custom routes to call it's functions. This may be integrated into later versions.
+* Lachesis does not support filtering. Later versions may include this.
 
 ## Installation
 
-Run:
+Standalone Server:
 
 ```
 touch .env
 npm install
 npm run start
+```
+
+Server Module:
+
+```javascript
+const lachesis = require('lachesis');
+const port = 8080; // This can be defined here, or through a .env file.
+
+const start = async () => {
+  const timerServer = await lachesis.init(true, port); // This initializes Lachesis and indicates that we want a server with our indicated port.
+
+  // The timer controller can be accessed directly once lachesis has been initialized whether or not we're using a server:
+  await timerServer.timerController.createTimer({
+    duration: 900,                          // Seconds by default
+    payload: { message: 'Timer Done!' },    // This is sent to the callbackUrl
+    callback: 'http://localhost:8081'       // The callback url
+  });
+};
+
+start();
+
 ```
 
 ### Environment Variables
