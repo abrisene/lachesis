@@ -2,6 +2,8 @@
 
 Lachesis is a simple timer queue server using NodeJS and MongoDB for persistence.
 
+[![npm version](https://badge.fury.io/js/lachesis.svg)](https://badge.fury.io/js/lachesis) [![GitHub version](https://badge.fury.io/gh/abrisene%2Flachesis.svg)](https://badge.fury.io/gh/abrisene%2Flachesis)
+
 ### Usage
 
 Lachesis can be cloned and used as a standalone server, or used as a module.
@@ -18,15 +20,16 @@ Lachesis can be cloned and used as a standalone server, or used as a module.
 
 ## Installation
 
-Standalone Server:
+**Standalone Server**
 
 ```
+git clone git@github.com:abrisene/lachesis.git
 touch .env
 npm install
 npm run start
 ```
 
-Server Module:
+**Server Module**
 
 ```javascript
 const lachesis = require('lachesis');
