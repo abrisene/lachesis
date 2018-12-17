@@ -14,7 +14,7 @@
     "test": "jest"
   },
   "author": "David Robinson <dr@monetise.io> (http://www.monetise.io)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/abrisene/lachesis/issues"
   },
@@ -36,11 +36,10 @@
     "draftlog": "1.0.12",
     "express": "4.16.4",
     "ip": "1.1.5",
+    "jest": "23.6.0",
     "mongodb": "3.1.10",
     "mongoose": "5.3.15",
     "morgan": "1.9.1",
-    "nodemon": "1.18.8",
-    "pug": "2.0.3",
-    "redis": "2.8.0"
+    "nodemon": "1.18.8"
   }
 }
