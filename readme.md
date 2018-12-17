@@ -1,8 +1,8 @@
 ## Lachesis
 
-Lachesis is a simple timer queue server using NodeJS and MongoDB for persistence.
-
 [![npm version](https://badge.fury.io/js/lachesis.svg)](https://badge.fury.io/js/lachesis) [![GitHub version](https://badge.fury.io/gh/abrisene%2Flachesis.svg)](https://badge.fury.io/gh/abrisene%2Flachesis)
+
+Lachesis is a simple timer queue server using NodeJS and MongoDB for persistence.
 
 ### Usage
 
